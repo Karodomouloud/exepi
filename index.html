@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KARODO SHOP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --main-color: #00ffaa;
+      --secondary-color: #00e0ff;
+      --highlight: #ffee58;
+      --dark-bg: #0f2027;
+      --mid-bg: #203a43;
+      --light-bg: #2c5364;
+      --text-light: #f5f5f5;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, var(--dark-bg), var(--mid-bg), var(--light-bg));
+      color: var(--text-light);
+      overflow-x: hidden;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 3rem;
+      font-weight: 700;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--main-color);
+      color: var(--main-color);
+      letter-spacing: 2px;
+      text-shadow: 0 0 12px var(--main-color);
+      animation: fadeInDown 1s ease-in-out;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 1rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      width: 100%;
+      max-width: 1200px;
+    }
+    .service {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 255, 170, 0.3);
+    }
+    .service h2 {
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+      color: var(--highlight);
+    }
+    .service p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+      color: #eeeeee;
+    }
+    .price {
+      font-weight: bold;
+      color: #4caf50;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 2.2rem;
+      font-size: 1.1rem;
+      background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 14px;
+      transition: 0.3s ease;
+    }
+    .btn:hover {
+      background: linear-gradient(to left, var(--main-color), var(--secondary-color));
+      transform: scale(1.06);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      background: rgba(0, 0, 0, 0.4);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--main-color);
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>KARODO SHOP</header>
+  <main>
+    <div class="services">
+      <div class="service">
+        <h2> رسم بستايل lineart</h2>
+        <p>لكل رسمه :<span class="price">200 دج</span></p>
+        <a href="https://www.instagram.com/karodo_shopp/" class="btn" target="_blank" rel="noopener">اطلب الآن</a>
+      </div>
+      <div class="service">
+        <h2>تصميم صور مصغرة </h2>
+        <p>السعر لكل صورة: <span class="price">150 دج</span></p>
+        <a href="https://www.instagram.com/karodo_shopp/" class="btn" target="_blank" rel="noopener">اطلب الآن</a>
+      </div>
+      <div class="service">
+        <h2>تصميم موقع </h2>
+        <p>تصميم موقع سعر: <span class="price">500 دج</span></p>
+        <a href="https://www.instagram.com/karodo_shopp/" class="btn" target="_blank" rel="noopener">اطلب الآن</a>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 KARODO SHOP | جميع الحقوق محفوظة
+  </footer>
+</body>
+</html>
